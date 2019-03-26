@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.project.mapper.UserMapper">
+
+    <select id="findByPage" parameterType="pager" resultType="com.project.entity.User">
+        SELECT * FROM tb_user
+        <where>
+            <if test="param.userName != null">
+                userName = #{param.userName}
+            </if>
+            <if test="param.password != null">
+                and password = #{param.password}
+            </if>
+        </where>
+    </select>
+
+    <select id="findByName" resultType="com.project.entity.User">
+        SELECT * FROM tb_user
+        where userName = #{userName} and password = #{password} and vaild = 1
+    </select>
+
+</mapper>

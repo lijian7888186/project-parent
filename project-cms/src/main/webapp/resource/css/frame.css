@@ -1,0 +1,153 @@
+.leftBar {
+	position: absolute;
+	height: 100%;
+	background-color: #21252b;
+	width: 5px;
+	left: 0;
+	top: 0;
+	display: block;
+}
+
+.menus {
+	position: absolute;
+	left: 5px;
+	top: 0;
+	height: 100%;
+	width: 220px;
+	overflow: auto;
+	background-color: #21252b;
+}
+
+.logoContainer {
+	width: 220px;
+	color: white;
+	margin-top: 0;
+	text-align: center;
+	vertical-align: center;
+	height: 55px;
+}
+
+.menu {
+	margin-top: 0;
+	width: 225px;
+	background-color: #282c34;
+	margin-left: -5px;
+	position: static;
+}
+
+.fatherMenu {
+	text-align: center;
+	line-height: 55px;
+	width: 225px;
+	color: white;
+	font-size: 18px;
+	cursor: pointer;
+}
+
+.nameArrow {
+	float: right;
+	width: 0px;
+	height: 0px;
+	margin-right: 10px;
+	margin-top: 25px;
+	border-style: solid;
+	border-width: 6px 6px 0 6px;
+	border-color: white transparent transparent;
+}
+
+.childContainer {
+	background-color: #009688;
+	font-size: 14px;
+	display: none;
+}
+
+.childMenu {
+	width: 225px;
+	margin-left: 0px;
+	height: 45px;
+	line-height: 45px;
+	cursor: pointer;
+}
+
+.selected {
+	background-color: #f9f9fa;
+	color: black;
+}
+
+.contentContainer {
+	position: fixed;
+	top: 0;
+	left: 225px;
+	right: 0;
+	bottom: 0;
+	height: 100%;
+}
+
+.contentHead {
+	width: 100%;
+	height: 30px;
+	line-height: 25px;
+	background-color: #dadee0;
+	border-style: none none solid none;
+	border-width: 2px;
+	border-color: #0a84ff;
+}
+
+.frameTagContainer {
+	position: fixed;
+	margin-top: 0;
+	width: 100%;
+	height: 40px;
+	background-color: #ffffff;
+	box-shadow: 0 5px 5px 0px #e0e0e0;
+}
+
+.tag {
+	position: static;
+	margin-top: 8px;
+	margin-left: 5px;
+	padding: 4px 8px;
+	display: inline-block;
+	border-style: solid solid none solid;
+	border-width: 1px;
+	border-color: #9da5b4;
+	cursor: pointer;
+}
+
+.closeTagButton {
+	margin-left: 2px;
+	margin-right: 2px;
+	font-size: 18px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+.closeTagButton:hover{
+	background-color: red;
+}
+
+.tagNormal {
+	background-color: #eef3f9;
+}
+
+.tagSelected {
+	background-color: #0080ff;
+	color: #ffffff;
+	border-color: #0080ff;
+}
+
+.frameContainer {
+	position: fixed;
+	height: auto;
+	top: 72px;
+	left: 225px;
+	right: 0;
+	bottom: 0;
+}
+
+.frameContainer iframe {
+	border: none;
+	width: 100%;
+	height: 100%;
+}

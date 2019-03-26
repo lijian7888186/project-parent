@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xmlns:context="http://www.springframework.org/schema/context"
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+
+	<!--注解说明 -->
+	<context:annotation-config />
+	<!-- 把标记了@Controller注解的类转换为bean -->
+	<context:component-scan base-package="com.project.util.redis" />
+	<!--<context:property-placeholder location="classpath:prop-redis.properties"/>-->
+	
+    <bean id="jedisPool" class="redis.clients.jedis.JedisPoolConfig">  
+        <property name="maxIdle" value="100" />  
+        <property name="maxTotal" value="300" />  
+        <property name="maxWaitMillis" value="100000" />  
+        <property name="testOnBorrow" value="true" />  
+    </bean>     
+	<!-- redis工厂 -->
+	<bean id="jedisConnectionFactory" class="org.springframework.data.redis.connection.jedis.JedisConnectionFactory"
+	  destroy-method="destroy" ><!--  p:host-name="47.104.5.16" p:port="6379"/> -->
+	   <constructor-arg index="0" ref="jedisPool"></constructor-arg>
+	   <property name="usePool" value="true"></property>
+	   <property name="hostName" value="${redis.url}"></property>
+	   <property name="port" value="${redis.port}"></property>
+	   <property name="password" value="${redis.password}"></property>
+	</bean>
+	<!-- redis服务封装 -->
+	<bean id="redisService" class="com.project.util.redis.RedisService">
+	</bean>
+</beans>

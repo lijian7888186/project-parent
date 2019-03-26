@@ -1,0 +1,105 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: PingFangSC-Regular;
+    list-style: none;
+}
+.mark{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 96px;
+    left: 0;
+    background:url(../img/background-image@3x.jpg) no-repeat;
+    background-size: 100% 100%;
+}
+.business_box{
+    width:461px;
+    height:506px;
+    background: #FFFFFF;
+    box-shadow: 0 0 16px 0 rgba(0,0,0,0.10);
+    position: absolute;
+    left:50%;
+    top:30%;
+    margin-left:-230.5px;
+    margin-top:-253px;
+}
+.business_box p:nth-child(1){
+    font-family: PingFangSC-Regular;
+    font-size: 16px;
+    color: #B2BABE;
+    letter-spacing: 0;
+    padding-left:30px;
+    padding-top:17px;
+}
+.business_box p:nth-child(2){
+    font-family: FZZZHONGJW--GB1-0;
+    font-size: 28px;
+    color: #333333;
+    letter-spacing: 0;
+    text-align: center;
+    padding-top:37px;
+}
+.mark .business_box .phone_content{
+    width:100%;
+    margin-left:80px;
+    margin-right:87px;
+}
+.mark .business_box .phone_content ul .li1{
+    margin-top:54px;
+}
+.messages{
+    margin-left:58px;
+    font-size:12px;
+    font-weight:400;
+    margin-top:4px;
+    height:17px;
+    color:rgba(255,58,129,1);
+}
+.mark .business_box .phone_content ul .li2{
+    margin-top:7px;
+    position: relative;
+}
+.mark .business_box .phone_content input{
+    display:inline-block;
+    width:230px;
+    height:40px;
+    border:none;
+    border: 1px solid #DCDBDC;
+    outline: none;
+    padding-left:12px;
+    color:#202021;
+}
+
+.mark .business_box .phone_content ul .li3{
+    width:302px;
+    height:50px;
+    background: #ff3a81;
+    font-size: 18px;
+    color: #FFFFFF;
+    letter-spacing: 1px;
+    text-align: center;
+    line-height: 50px;
+    margin-top:44px;
+    cursor:pointer;
+}
+
+.mark .business_box .phone_content ul li span{
+    font-size: 16px;
+    color: #666666;
+    letter-spacing: 0;
+    margin-right:10px;
+}
+.password{
+    margin-left:58px;
+    font-size:12px;
+    font-weight:400;
+    margin-top:4px;
+    height:17px;
+    color:#FF3A81;
+}
+
+.login .mark .business_box .phone_content .imgscode-container{
+    position:absolute;
+    top:0;
+}

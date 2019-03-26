@@ -1,0 +1,89 @@
+.optContainer span {
+    cursor: default;
+    display: block;
+    padding: 5px 0;
+}
+.optContainer span:hover {
+    background-color: #35C5FE;
+    color:white;
+}
+
+.optContainer {
+    border-style: solid;
+    border-color: #D8D8D8;
+    width: 100%;
+    border-width: 1px;
+    font-size: 14px;
+    display: none;
+    position: absolute;
+    background-color: white;
+    text-align:center;
+    left: 0;
+    top: 29px;
+    z-index: 999;
+}
+
+.optDisplayer {
+    float: left;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #D8D8D8;
+    display: block;
+    position: relative;
+    left: 0;
+    cursor: default;
+    font-size: 14px;
+    min-width: 100px;
+    height: 28px;
+    text-align: center;
+    margin-right:-2px;
+    background-color: white;
+    width: 100%;
+}
+
+.selector {
+    display: inline-block;
+    top:11px;
+    position: relative;
+    width: auto;
+    margin-left: 8px;
+}
+
+.optDisplayer .downArrow {
+    background-color: #35C5FE;
+    width:30px;
+    height:30px;
+    font-size: 16px;
+    color: white;
+    margin:-1px -1px -1px 3px;
+    float: right;
+}
+
+.optDisplayer .leftText {
+    margin-top:5px;
+    display: inline-block;
+    height: 100%;
+}
+
+.fullConver {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    z-index: 99;
+    opacity: 0;
+    display: none;
+}
+/*小箭头*/
+.arrow{
+    float:right;
+    width: 0px;
+    height: 0px;
+    margin-right: 9px;
+    border-style: solid;
+    border-width: 6px 6px 0 6px;
+    border-color: white transparent  transparent ;
+    margin-top: 12px;
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/login.css">
+    <title>登录</title>
+</head>
+<body>
+<div class="login">
+    <div class="mark">
+        <div class="business_box">
+            <p>德利中天后台系统</p>
+            <p>登录</p>
+            <div class="phone_content">
+                <span id="imgscode-password" class="imgscode-container"></span>
+                <ul>
+                    <li class="li1">
+                        <span>账号</span>
+                        <input type="text" id="userName" placeholder="请输入账号"/>
+                    </li>
+                    <div class="messages"></div>
+                    <li class="li2 clearfix">
+                        <span>密码</span>
+                        <input id="password" type="password" placeholder="请输入密码"/>
+                    </li>
+                    <div class="password"></div>
+                    <li class="li3" onclick="login()">登录</li>
+
+                </ul>
+            </div>
+            <div class="imageValidateCode" ></div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="js/jquery-1.8.0.min.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script src="js/common.js"></script>
+<script>
+    function login(){
+        var userName = document.getElementById("userName").value;
+        var password =  document.getElementById("password").value;
+        tool.ajax({
+            data:{userName:userName,password:password},
+            url:'login/login',
+            success:function(data){
+                if (data.code == "00000"){
+                    location.href = "index.html";
+                }else{
+                    alert(data.message);
+                }
+            }
+        })
+    }
+
+    function checkLogin(){
+        tool.ajax({
+            url:'login/checkLogin',
+            success:function(data){
+                if (data.code != "10001") {
+                    location.href = "index.html";
+                }
+            }
+        })
+    }
+
+    window.addEventListener('load',function(){
+        checkLogin();
+    });
+</script>
+</html>

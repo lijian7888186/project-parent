@@ -1,0 +1,76 @@
+body{
+    background-color: #eef3f9;
+}
+.background-layer{
+    margin: 10px;
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0 5px 5px 0px #e0e0e0;
+}
+div.filterLine{
+    width: 100%;
+    height: 50px;
+    margin-bottom: 10px;
+}
+span.formButton{
+    padding:8px 20px;
+    font-size:13px;
+    color:#FFFFFF;
+    line-height:50px;
+    border-radius: 2px;
+    background-color: #4dc3f9;
+    cursor: pointer;
+}
+div.dialog{
+    margin-left: 50%;
+    margin-top: 5%;
+    transform: translate(-50%,0);
+    background-color: #ffffff;
+    border-radius: 5px;
+    position: relative;
+    display: none;
+}
+div.layer{
+    position: fixed;
+    background-color: rgba(0,0,0,0.6);
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+div.dialog div.dialogTitle{
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 1px solid #e0e0e0;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+div.dialog div.dialogContent{
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 10px;
+    height: calc(100% - 110px);
+    overflow: auto;
+    font-size: 14px;
+}
+div.dialog div.dialogFoot{
+    position: absolute;
+    bottom: 0;
+    border-top: solid 1px #e0e0e0;
+    width: 100%;
+    height: 51px;
+    text-align: center;
+}
+div.dialog div.dialogFoot span.dialogButton{
+    padding:10px 50px;
+    font-size:13px;
+    color:#FFFFFF;
+    line-height:50px;
+    border-radius: 2px;
+    background-color: #4dc3f9;
+    cursor: pointer;
+}
+div.dialog div.dialogFoot span.dialogButton.red{
+    background-color: #fb6767;
+}

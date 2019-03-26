@@ -1,0 +1,33 @@
+.list-table{
+    text-align: center;
+    border-spacing: 0;
+    width: 100%;
+    border: solid 1px #D8D8D8;
+    font-size: 14px;
+    color: #555555;
+}
+.list-table thead tr{
+    font-weight: bold;
+    font-family: PingFangSC-Regular;
+    background-color: #EBEEF6;
+}
+.list-table thead tr{
+    line-height: 30px;
+}
+.list-table tbody tr{
+    height: 40px;
+}
+.list-table tbody tr:hover{
+    background-color: #e2faff;
+}
+.list-table span.list-table-button {
+    background-color: #35C5FE;
+    margin: 3px;
+    border-radius: 2px;
+    padding: 2px 5px;
+    display: inline-block;
+    line-height: 14px;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 12px;
+}
